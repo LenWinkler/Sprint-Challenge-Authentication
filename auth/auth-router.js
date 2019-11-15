@@ -26,6 +26,7 @@ router.post('/register', (req, res) => {
   }
 });
 
+
 router.post('/login', (req, res) => {
   let { username, password } = req.body;
 
@@ -47,6 +48,11 @@ router.post('/login', (req, res) => {
       res.status(500).json(err)
     });
 });
+
+
+
+
+
 
 function getJwtToken(user) {
   const payload = {
