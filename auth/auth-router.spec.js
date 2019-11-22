@@ -12,7 +12,7 @@ describe('auth endpoints', function() {
             await db('users').truncate();
         })
 
-        it('should return 200 OK', async function() {
+        it('should return 201 OK', async function() {
             
             return await request(server)
             .post('/api/auth/register')
@@ -54,7 +54,3 @@ describe('auth endpoints', function() {
             })
         })
     })
-
-    const hasToken = res => {
-        res.body.should.have.property("token");
-    }
